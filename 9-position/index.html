@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Position</title>
+    <style>
+      /*
+            position
+            1- static
+            2- relative => z-index, absolute
+            3- absolute
+            4- fixed
+            5- sticky
+        */
+      body {
+        margin: 0;
+        height: 200vh;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        color: white;
+        font-size: 30px;
+      }
+
+      .big-wrapper {
+        padding: 10px;
+        border: 5px solid red;
+        width: 700px;
+        position: relative;
+        margin-top: 100px;
+        position: sticky;
+        top: 67px;
+      }
+
+      .wrapper {
+        border: 5px solid black;
+        width: 600px;
+        position: relative;
+      }
+
+      #box1 {
+        background-color: red;
+        position: relative;
+        /*   z-index: 99; */
+      }
+
+      #box2 {
+        background-color: blue;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: 4;
+      }
+      #box3 {
+        background-color: purple;
+        position: relative;
+        /* top: -200px; */
+        /*   z-index: 1; */
+      }
+
+      header {
+        background-color: yellowgreen;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 20;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2 class="logo">LOGO</h2>
+        <div class="menu-links">
+          <a href="#">Home</a>
+          <a href="#">Products</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+    </header>
+    <div class="big-wrapper">
+      <div class="wrapper">
+        <div class="box" id="box1">kutu1</div>
+        <div class="box" id="box2">kutu2</div>
+        <div class="box" id="box3">kutu3</div>
+      </div>
+    </div>
+  </body>
+</html>

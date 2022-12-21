@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Selectors(Seçiciler)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container * {
+        border: 1px solid red;
+      }
+
+      ul {
+        margin-left: 20px;
+        list-style: none;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: black;
+      }
+
+      /*  ul + p{
+        color: purple;
+      } */
+
+      ul ~ p {
+        color: purple;
+      }
+
+      .direkt-secici > p{
+        color: red;
+      }
+
+      p[title]{
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#">list 1 </a>
+      </li>
+      <li>list 2</li>
+      <li>list 3</li>
+      <li>list 4</li>
+    </ul>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+      perspiciatis blanditiis! Sequi reprehenderit, quibusdam unde repudiandae
+      voluptates soluta quis. Mollitia a nemo, harum aut numquam error cumque
+      accusantium iure debitis.
+    </p>
+
+    <p title="">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore,
+      perspiciatis blanditiis! Sequi reprehenderit, quibusdam unde repudiandae
+      voluptates soluta quis. Mollitia a nemo, harum aut numquam error cumque
+      accusantium iure debitis.
+    </p>
+
+    <div class="container" id="container">
+      <p>
+        Lorem ipsum dolor sit amet.
+        <span>Lorem ipsum dolor sit amet.</span>
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet.
+        <i>Lorem ipsum dolor sit amet.</i>
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet.
+        <strong>Lorem ipsum dolor sit amet.</strong>
+      </p>
+    </div>
+
+    <div class="container" id="container2"></div>
+
+    <div class="direkt-secici">
+      <h4>Direkt Seçici</h4>
+      <p>Lorem ipsum dolor sit.</p>
+      <div>
+        <p>Lorem ipsum dolor sit.</p>
+      </div>
+      <p class="paragraph" title="">Lorem ipsum dolor sit.</p>
+    </div>
+  </body>
+</html>

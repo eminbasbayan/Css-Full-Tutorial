@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Pseudo</title>
+  </head>
+  <style>
+    .links a:link {
+      color: turquoise;
+    }
+
+    .links a:visited {
+      color: red;
+    }
+
+    .links a:hover {
+      color: black;
+    }
+
+    .links a:active {
+      color: blue;
+    }
+
+    .show-button button {
+      display: none;
+    }
+
+    .show-button:hover {
+      color: red;
+    }
+
+    .show-button:hover button {
+      display: inline-block;
+    }
+
+    .pseudo p:first-child{
+        color: red;
+    }
+    .pseudo p:last-child{
+        color: blue;
+    }
+
+    .pseudo p:first-child:first-letter{
+        font-size: 50px;
+        color: blue;
+    }
+
+    .pseudo p::first-line{
+        background-color: aqua;
+    }
+
+    .pseudo p:last-child::before{
+        content: "***"
+    }
+
+    .pseudo p::selection{
+        color: red;
+        background-color: black;
+    }
+  </style>
+  <body>
+    <!--! Pseudo Classes  -->
+
+    <!-- <div class="links">
+      <a href="home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div> -->
+
+  <!--   <div class="show-button">
+      Show button...
+      <br />
+      <button>Click</button>
+    </div> -->
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus sunt iusto assumenda! Sequi possimus harum pariatur eius quis, labore ex maxime, saepe delectus illo dignissimos, et voluptas velit nam similique.</p>
+
+    <div class="pseudo">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo sequi sed blanditiis explicabo ducimus temporibus? Quod sit laboriosam quaerat dicta?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo sequi sed blanditiis explicabo ducimus temporibus? Quod sit laboriosam quaerat dicta?&#128512;</p>
+    </div>
+  </body>
+</html>

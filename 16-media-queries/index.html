@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Media Queries</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+
+      /*  @media (min-width: 768px){
+        body{
+            background-color: white;
+        }
+      } */
+
+      /*      @media (max-width: 992px) and (min-width: 768px) {
+        body {
+          background-color: yellow !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        body {
+          background-color: aqua;
+        }
+      }
+
+      @media (max-width: 600px) {
+        body {
+          background-color: red;
+        }
+      } */
+
+      h1 {
+        display: none;
+      }
+
+      /* large screen */
+      @media (min-width: 1201px) {
+        .large {
+          display: block;
+        }
+      }
+
+      /* desktops */
+      @media (min-width: 1025px) and (max-width: 1200px) {
+        .desktop {
+          display: block;
+        }
+      }
+
+      /* laptops */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .laptops {
+          display: block;
+        }
+      }
+
+      /* tablets */
+      @media (min-width: 481px) and (max-width: 768px) {
+        .tablets {
+          display: block;
+        } 
+      }
+
+      /* tablets */
+      @media (min-width: 320px) and (max-width: 480px) {
+        .mobile {
+          display: block;
+        } 
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="mobile">mobile</h1>
+    <h1 class="tablets">tablets</h1>
+    <h1 class="laptops">laptops</h1>
+    <h1 class="desktop">desktop</h1>
+    <h1 class="large">large screen</h1>
+  </body>
+</html>

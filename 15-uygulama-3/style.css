@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  height: 200vh;
+}
+
+/*! header start  */
+header {
+  border-bottom: 1px solid #717171;
+  position: fixed;
+  width: 100%;
+  z-index: 11;
+  background-color: #0f0f0f;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 60px;
+}
+
+header i {
+  font-size: 20px;
+  color: white;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-left h3 {
+  font-size: 24px;
+  color: #ff0000;
+  margin-left: 20px;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+}
+
+.header-search {
+  border: 1px solid #717171;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  margin-right: 12px;
+}
+
+.header-search input {
+  background-color: #0f0f0f;
+  border: none;
+  outline: none;
+}
+
+.header-search .bi-search {
+  font-size: 18px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.header-center .bi-mic {
+  background-color: #909090;
+  /*  padding: 10px; */
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.header-right .bi-bell {
+  position: relative;
+}
+
+.header-right .bi-bell::after {
+  content: "1";
+  background-color: #ff0000;
+  color: white;
+  font-size: 10px;
+  padding: 4px;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+}
+
+.header-right .avatar {
+  width: 32px;
+  height: 32px;
+}
+
+.header-right .avatar img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+/*! header end  */
+
+.content {
+  display: flex;
+  margin-top: 60px;
+}
+
+/*! sidebar start  */
+
+.sidebar {
+  height: 100vh;
+  border-right: 1px solid #717171;
+  width: 100px;
+  position: fixed;
+  z-index: 10;
+  background-color: #0f0f0f;
+  transform: translateX(-200px);
+  animation: sidebar 1s forwards ease-in-out;
+}
+
+@keyframes sidebar {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.sidebar-item {
+  margin-top: 15px;
+}
+
+.sidebar-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s ease color;
+}
+
+.sidebar-item a:hover {
+  color: #ff0000 !important;
+}
+
+.sidebar-links .sidebar-item:nth-child(2) a:link {
+  color: red;
+}
+
+.sidebar-links .sidebar-item:nth-child(2) a:focus {
+  color: blue;
+}
+
+/* 
+.sidebar-item a span:hover {
+  color: #ff0000;
+}
+
+.sidebar-item a i:hover {
+  color: #ff0000;
+} */
+
+.sidebar i {
+  font-size: 20px;
+}
+
+.sidebar-item span {
+  font-size: 12px;
+  margin-top: 5px;
+}
+/*! sidebar end  */
+
+/*! vidoes start  */
+
+.videos {
+  margin: 20px;
+  flex: 1;
+  margin-left: 120px;
+}
+
+.video-list {
+  color: white;
+  list-style: none;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+  top: -1000px;
+  animation: videoList 1s forwards ease-in-out;
+}
+
+@keyframes videoList {
+  to {
+    top: 0;
+  }
+}
+
+.video-list-item {
+  transition: transform 0.5s ease-in;
+  cursor: pointer;
+}
+
+.video-list-item:hover {
+  transform: scale(1.1);
+}
+
+.video-image {
+  position: relative;
+  display: flex;
+}
+
+.video-image img {
+  width: 100%;
+}
+
+.video-image span {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  padding: 0 4px;
+  background-color: #0f0f0f;
+  font-size: 12px;
+}
+
+.video-texts {
+  display: flex;
+  row-gap: 6px;
+  flex-direction: column;
+  margin-top: 4px;
+}
+
+.video-texts a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.video-texts span {
+  font-size: 12px;
+}
+/*! vidoes end  */

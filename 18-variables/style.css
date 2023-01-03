@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Seymour+One&display=swap");
+
+:root {
+  --primary-color: black;
+  --secondary-color: #c3195d;
+  --bg-color: #680747;
+  --base-font-family: "Poppins", sans-serif;
+  --secondary-font-family: "Seymour One", sans-serif;
+  --border-radius: 4px;
+  --base-font-size: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--base-font-size);
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--base-font-family);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  color: white;
+  border: 1px solid black;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+  font-family: var(--secondary-font-family);
+}
+
+section {
+ €: blue;
+  margin: 10px 20px;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  color: white;
+  background-color: var(--secondary-color);
+}
+
+section button {
+  color: white;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  padding: 8px 20px;
+  margin-top: 10px;
+  border-radius: var(--border-radius);
+  font-family: var(--secondary-font-family);
+}

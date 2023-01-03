@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Rem ve Em Birimleri</title>
+    <style>
+      html {
+        font-size: 62.5%; /* default size */
+      }
+
+      .box-wrapper {
+        font-size: 30px;
+      }
+
+      .box {
+        font-size: 14px;
+      }
+
+      .box p {
+        font-size: 1.5em;
+        margin-top: 2em;
+      }
+
+      .box span {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        display: inline-block;
+      }
+
+      @media (max-width: 768px) {
+        html {
+          font-size: 8px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        html {
+          font-size: 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-wrapper">
+      <div class="box">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
+          adipisci, quidem saepe porro iure provident vero nemo tempore soluta,
+          architecto quia. Atque rem assumenda veniam beatae sequi corrupti sunt
+          nobis.
+        </p>
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam
+          aperiam voluptatum, ullam quasi earum numquam commodi suscipit rem
+          recusandae exercitationem dolorem atque a! Aspernatur iure repudiandae
+          harum quos ipsa?</span
+        >
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam
+          aperiam voluptatum, ullam quasi earum numquam commodi suscipit rem
+          recusandae exercitationem dolorem atque a! Aspernatur iure repudiandae
+          harum quos ipsa?</span
+        >
+        <span
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nam
+          aperiam voluptatum, ullam quasi earum numquam commodi suscipit rem
+          recusandae exercitationem dolorem atque a! Aspernatur iure repudiandae
+          harum quos ipsa?</span
+        >
+      </div>
+    </div>
+  </body>
+</html>
